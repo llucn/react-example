@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.1",
+    "@capacitor/android": "^8.3.1",
+    "@capacitor/core": "^8.3.1",
+    "@capacitor/device": "^8.0.2",
+    "@capacitor/ios": "^8.3.1",
     "antd": "^6.3.6",
     "axios": "^1.15.0",
     "oidc-client-ts": "^3.5.0",
@@ -21,6 +25,7 @@
     "react-router-dom": "^7.14.1"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.3.1",
     "@eslint/js": "^9.39.4",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",

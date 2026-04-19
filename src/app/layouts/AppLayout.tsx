@@ -1,6 +1,5 @@
 import { useState, type ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from 'react-oidc-context';
 import { Layout, Menu, Dropdown, Avatar, Space, theme } from 'antd';
 import {
   HomeOutlined,
@@ -11,6 +10,7 @@ import {
   MenuOutlined,
   CloseOutlined,
   SunOutlined,
+  MobileOutlined,
   MoonOutlined,
 } from '@ant-design/icons';
 import { useTheme } from '../theme/ThemeContext';
@@ -22,20 +22,17 @@ const menuItems = [
   { key: '/publish', icon: <AlertOutlined />, label: 'Publish' },
   { key: '/issues', icon: <UnorderedListOutlined />, label: 'Issues' },
   { key: '/profile', icon: <UserOutlined />, label: 'Profile' },
+  { key: '/device', icon: <MobileOutlined />, label: 'Device' },
 ];
 
 export function AppLayout({ children }: { children: ReactNode }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const auth = useAuth();
   const { token } = theme.useToken();
   const { theme: appTheme, toggleTheme } = useTheme();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const username =
-    auth.user?.profile?.preferred_username ??
-    auth.user?.profile?.name ??
-    '';
+  const username = 'User';
 
   const avatarLabel = username.charAt(0).toUpperCase() || '?';
 
@@ -44,7 +41,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
       key: 'logout',
       icon: <LogoutOutlined />,
       label: 'Logout',
-      onClick: () => auth.signoutRedirect(),
+      onClick: () => {},
     },
   ];
 
