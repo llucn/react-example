@@ -48,7 +48,7 @@ export function PublishIssuePage() {
   return (
     <div>
       <div className="page-header">
-        <h1 className="page-title">发布事件</h1>
+        <h1 className="page-title">Publish Issue</h1>
       </div>
       <div className="card" style={{ maxWidth: 700 }}>
         <div className="card-body">
@@ -59,55 +59,55 @@ export function PublishIssuePage() {
           >
             <Form.Item
               name="title"
-              label="事件名称"
-              rules={[{ required: true, message: '请输入事件名称' }]}
+              label="Title"
+              rules={[{ required: true, message: 'Please enter the issue title' }]}
             >
-              <Input placeholder="请输入事件名称" maxLength={200} />
+              <Input placeholder="Please enter the issue title" maxLength={200} />
             </Form.Item>
 
             <Form.Item
               name="description"
-              label="事件描述"
-              rules={[{ required: true, message: '请输入事件描述' }]}
+              label="Description"
+              rules={[{ required: true, message: 'Please enter the issue description' }]}
             >
-              <TextArea rows={4} placeholder="请输入事件描述" />
+              <TextArea rows={4} placeholder="Please enter the issue description" />
             </Form.Item>
 
             <Form.Item
               name="location"
-              label="位置"
-              rules={[{ required: true, message: '请在地图上选择位置' }]}
+              label="Location"
+              rules={[{ required: true, message: 'Please select a location on the map' }]}
             >
               <BaiduMapPicker />
             </Form.Item>
 
-            <Form.Item name="address" label="地址">
-              <Input placeholder="请输入地址描述（选填）" maxLength={500} />
+            <Form.Item name="address" label="Address">
+              <Input placeholder="Please enter the address description (optional)" maxLength={500} />
             </Form.Item>
 
             <Form.Item
               name="deadline"
-              label="截止时间"
-              rules={[{ required: true, message: '请选择截止时间' }]}
+              label="Deadline"
+              rules={[{ required: true, message: 'Please select a deadline' }]}
             >
               <DatePicker
                 showTime
                 style={{ width: '100%' }}
-                placeholder="选择截止时间"
+                placeholder="Please select a deadline"
               />
             </Form.Item>
 
-            <Form.Item name="recruitCount" label="招募人数">
-              <Input type="number" placeholder="请输入招募人数（选填）" style={{ width: '100%' }} />
+            <Form.Item name="recruitCount" label="Recruitment Count">
+              <Input type="number" placeholder="Please enter the number of recruits (optional)" style={{ width: '100%' }} />
             </Form.Item>
 
-            <Form.Item name="skillRequirement" label="技能要求">
-              <TextArea rows={2} placeholder="请输入技能要求（选填）" maxLength={500} />
+            <Form.Item name="skillRequirement" label="Skill Requirement">
+              <TextArea rows={2} placeholder="Please enter the skill requirement (optional)" maxLength={500} />
             </Form.Item>
 
             <Form.Item>
               <Button type="primary" htmlType="submit" loading={submitting}>
-                发布
+                Publish
               </Button>
             </Form.Item>
           </Form>
