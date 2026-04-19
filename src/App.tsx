@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import { ConfigProvider, theme } from 'antd';
-import { ProtectedRoute } from './app/auth/ProtectedRoute';
 import { useConfigureApiClient } from './app/auth/useConfigureApiClient';
 import { AppLayout } from './app/layouts/AppLayout';
 import { HomePage } from './app/pages/HomePage';
@@ -18,18 +17,16 @@ function AppInner() {
 
   return (
     <ConfigProvider theme={{ algorithm }}>
-      <ProtectedRoute>
-        <AppLayout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/publish" element={<PublishIssuePage />} />
-            <Route path="/issues" element={<IssueListPage />} />
-            <Route path="/issues/:id" element={<IssueDetailPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/device" element={<DevicePage />} />
-          </Routes>
-        </AppLayout>
-      </ProtectedRoute>
+      <AppLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/publish" element={<PublishIssuePage />} />
+          <Route path="/issues" element={<IssueListPage />} />
+          <Route path="/issues/:id" element={<IssueDetailPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/device" element={<DevicePage />} />
+        </Routes>
+      </AppLayout>
     </ConfigProvider>
   );
 }
