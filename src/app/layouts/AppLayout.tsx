@@ -11,6 +11,7 @@ import {
   MenuOutlined,
   CloseOutlined,
   SunOutlined,
+  MobileOutlined,
   MoonOutlined,
 } from '@ant-design/icons';
 import { useTheme } from '../theme/ThemeContext';
@@ -22,6 +23,7 @@ const menuItems = [
   { key: '/publish', icon: <AlertOutlined />, label: 'Publish' },
   { key: '/issues', icon: <UnorderedListOutlined />, label: 'Issues' },
   { key: '/profile', icon: <UserOutlined />, label: 'Profile' },
+  { key: '/device', icon: <MobileOutlined />, label: 'Device' },
 ];
 
 export function AppLayout({ children }: { children: ReactNode }) {
