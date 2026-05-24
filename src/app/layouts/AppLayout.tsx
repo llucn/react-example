@@ -7,6 +7,7 @@ import {
   LogoutOutlined,
   AlertOutlined,
   UnorderedListOutlined,
+  FileDoneOutlined,
   MenuOutlined,
   CloseOutlined,
   SunOutlined,
@@ -21,6 +22,7 @@ const menuItems = [
   { key: '/', icon: <HomeOutlined />, label: 'Home' },
   { key: '/publish', icon: <AlertOutlined />, label: 'Publish' },
   { key: '/issues', icon: <UnorderedListOutlined />, label: 'Issues' },
+  { key: '/work-orders', icon: <FileDoneOutlined />, label: 'Work Order Tracking' },
   { key: '/profile', icon: <UserOutlined />, label: 'Profile' },
   { key: '/device', icon: <MobileOutlined />, label: 'Device' },
 ];

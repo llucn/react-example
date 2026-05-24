@@ -8,6 +8,7 @@ import { PublishIssuePage } from './app/pages/PublishIssuePage';
 import { IssueListPage } from './app/pages/IssueListPage';
 import { IssueDetailPage } from './app/pages/IssueDetailPage';
 import { DevicePage } from './app/pages/DevicePage';
+import { WorkOrderTrackingPage } from './app/pages/WorkOrderTrackingPage';
 import { ThemeProvider, useTheme } from './app/theme/ThemeContext';
 
 function AppInner() {
@@ -23,6 +24,7 @@ function AppInner() {
           <Route path="/publish" element={<PublishIssuePage />} />
           <Route path="/issues" element={<IssueListPage />} />
           <Route path="/issues/:id" element={<IssueDetailPage />} />
+          <Route path="/work-orders" element={<WorkOrderTrackingPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/device" element={<DevicePage />} />
         </Routes>
