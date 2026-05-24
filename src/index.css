@@ -353,6 +353,229 @@ a:hover {
   margin: 0 auto 12px;
 }
 
+/* Work Order Tracking page */
+.wo-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wo-header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.wo-header-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.wo-header-icon-btn:hover {
+  color: var(--text);
+  background: var(--hover-subtle);
+}
+
+.wo-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.wo-summary {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  animation: fadeUp .35s ease both;
+}
+
+.wo-summary-heading {
+  margin-bottom: 16px;
+}
+
+.wo-summary-id {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.wo-summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.wo-summary-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px 16px;
+  margin: 0;
+}
+
+.wo-summary-row {
+  display: contents;
+}
+
+.wo-summary-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.wo-summary-value {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.wo-summary-value-main {
+  font-weight: 500;
+}
+
+.wo-summary-value-aux {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .wo-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
+  }
+
+  .wo-summary-row {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .wo-summary-row:last-child {
+    border-bottom: none;
+  }
+}
+
+.wo-tabs.ant-tabs .ant-tabs-tab {
+  font-size: 14px;
+}
+
+.wo-tab-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wo-tab-badge .ant-badge-count {
+  box-shadow: none;
+}
+
+.wo-tab-empty {
+  padding: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.wo-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wo-task-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  animation: fadeUp .35s ease both;
+}
+
+.wo-task-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.wo-task-card-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+@media (max-width: 600px) {
+  .wo-task-card-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wo-task-card-field-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.wo-task-card-field-value {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.wo-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wo-history-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.wo-history-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.wo-history-action {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
 /* Animations */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(10px); }
